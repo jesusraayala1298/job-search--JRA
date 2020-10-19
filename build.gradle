@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.jesusramirez'
+version '1.0-SNAPSHOT'
+
+application{
+    mainClassName 'org.jesuramirez.jobsearch.JobSearch'
+}
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/com.beust/jcommander
+    compile group: 'com.beust', name: 'jcommander', version: '1.78'
+    // https://mvnrepository.com/artifact/io.github.openfeign/feign-core
+    compile group: 'io.github.openfeign', name: 'feign-core', version: '11.0'
+    // https://mvnrepository.com/artifact/io.github.openfeign/feign-gson
+    compile group: 'io.github.openfeign', name: 'feign-gson', version: '11.0'
+
+}
